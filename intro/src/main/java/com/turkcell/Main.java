@@ -81,6 +81,8 @@ public class Main
         String str4 = new String("Turkcell"); // instance oluşturur, farklı referans
 
         System.out.println(str3==str4); // false, farklı referanslar
+
+        System.out.println("Merhaba" + " " + "Dünya!");
     }
 
     
