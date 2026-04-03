@@ -129,7 +129,26 @@ public class Main
         // String immutable (değiştirilemez) bir yapıya sahiptir. 
         // concat() gibi metotlar yeni bir String oluşturur, mevcut String'i değiştirmez.
         System.out.println(name3);
-    }
 
-    
-} // Main classının kapsama alanı (sınır)
+
+        // Karar Blokları & Döngüler 
+
+        // Belirli 1+ kapsamdaki kod bloklarını belirli koşullara göre ateşlemek.
+        // Karar bloğu = minimum 1 maksimum n adet karara göre farklı kodlar çalıştırabilir.
+        // Koşul: true-false
+
+        // Her koşul bloğu yalnızca 1 scope çalıştırır.
+        // Kodlar yukarıdan aşağıya çalıştırılır.
+        int age2 = 18;
+
+        if (age2 >= 18) {
+            System.out.println("Yetki verildi");
+        }
+        else if (age2 == 18) {
+            System.out.println("Yaşınız tam 18, ay kontrolü yapılıyor.");
+        }
+        else {
+            System.out.println("Yetki verilmedi");
+        }
+    }
+} 
