@@ -5,6 +5,7 @@ import java.util.Arrays;
 // Entrypoint
 public class Main 
 {
+   
     public static void main(String[] args) 
     {
         System.out.println("Merhaba Turkcell, Java'ya hoş geldiniz!");
@@ -170,31 +171,39 @@ public class Main
         /// 
         /// ....... öğrenci notu hesaplama
         calculateGrade(85);
-        calculateGrade(70);
+        calculateGrade(70, "Ayşe");
         calculateGrade(60);
-        calculateGrade(50);
-        calculateGrade(30);
+        calculateGrade(50, "Nurgül");
+        calculateGrade(30, "Tamer");
     }
-
     // Methodlar => belirli bir işi yapan kod bloklarıdır. Tekrar tekrar kullanılabilirler.
-   // erişim-belirteci - static veya boş - dönüş tipi (void => boş) - method ismi - (parametreler) - {}
-    public static void calculateGrade(int grade)
+    // erişim-belirteci - static veya boş - dönüş tipi (void => boş) - method ismi - (parametreler) - {}
+    // bir parametre tanımlıysa, null bile olsa göndermek zorundasın.
+    public static void calculateGrade(int grade, String name) // required parameter
     {
         if(grade >= 85)
         {
-            System.out.println("Notunuz: A");
+            System.out.println(name + " Notunuz: A");
         }
         else if(grade >= 70)
         {
-            System.out.println("Notunuz: B");
+            System.out.println(name + " Notunuz: B");
         }
         else if(grade >= 50)
         {
-            System.out.println("Notunuz: C");
+            System.out.println(name + " Notunuz: C");
         }
         else
         {
-            System.out.println("Notunuz: F");
+            System.out.println(name + " Notunuz: F");
         }
     }
+
+    // Name gönderilmezse, "Öğrenci" olarak varsayılan değer alsın.
+    // Method Overloading => Aynı isimde, farklı parametre sayısına sahip methodlar oluşturma.
+    public static void calculateGrade(int grade)
+    {
+        calculateGrade(grade, "Öğrenci");
+    }
+  
 } 
