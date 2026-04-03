@@ -137,7 +137,7 @@ public class Main
         // Karar bloğu = minimum 1 maksimum n adet karara göre farklı kodlar çalıştırabilir.
         // Koşul: true-false
 
-        // Her koşul bloğu yalnızca 1 scope çalıştırır.
+        // Her koşul bloğu yalnızca maksimum 1 scope çalıştırır.
         // Kodlar yukarıdan aşağıya çalıştırılır.
         int age2 = 18;
 
@@ -149,6 +149,52 @@ public class Main
         }
         else {
             System.out.println("Yetki verilmedi");
+        }
+
+        String username = "halit";
+        if(username.equals("tamer"))
+        {
+            System.out.println("Tamer hoş geldin..");
+        } // Karar blokları illaki bir scope çalıştırma zorunluluğu barındırmaz.
+
+        /// ..... öğrenci notu hesaplama
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// ....... öğrenci notu hesaplama
+        calculateGrade(85);
+        calculateGrade(70);
+        calculateGrade(60);
+        calculateGrade(50);
+        calculateGrade(30);
+    }
+
+    // Methodlar => belirli bir işi yapan kod bloklarıdır. Tekrar tekrar kullanılabilirler.
+   // erişim-belirteci - static veya boş - dönüş tipi (void => boş) - method ismi - (parametreler) - {}
+    public static void calculateGrade(int grade)
+    {
+        if(grade >= 85)
+        {
+            System.out.println("Notunuz: A");
+        }
+        else if(grade >= 70)
+        {
+            System.out.println("Notunuz: B");
+        }
+        else if(grade >= 50)
+        {
+            System.out.println("Notunuz: C");
+        }
+        else
+        {
+            System.out.println("Notunuz: F");
         }
     }
 } 
