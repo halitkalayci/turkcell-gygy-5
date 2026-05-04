@@ -24,8 +24,6 @@ public class CreateCategoryCommandHandler implements CommandHandler<CreateCatego
     }
 
 
-
-
     @Override
     public CreatedCategoryResponse handle(CreateCategoryCommand command) 
     {
